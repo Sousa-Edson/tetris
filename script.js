@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid');
     const scoreDisplay = document.querySelector('#score');
     const startButton = document.querySelector('#start-button');
+    const leftButton = document.querySelector('#left-button');
+    const rotateButton = document.querySelector('#rotate-button');
+    const rightButton = document.querySelector('#right-button');
+    const downButton = document.querySelector('#down-button');
     const width = 10;
     let timerId;
     let score = 0;
@@ -175,6 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     document.addEventListener('keyup', control);
+
+    // control the Tetromino with button events
+    leftButton.addEventListener('click', moveLeft);
+    rotateButton.addEventListener('click', rotate);
+    rightButton.addEventListener('click', moveRight);
+    downButton.addEventListener('click', moveDown);
 
     // start the game
     startButton.addEventListener('click', () => {
