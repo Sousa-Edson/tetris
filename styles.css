@@ -26,13 +26,11 @@ body {
 .grid div {
   width: 30px;
   height: 30px;
-  /* background-color: #333; */
-
   border: 1px solid #444;
 }
 
 .tetromino {
-  background-color: #ff0000; /* Cor visível para os tetrominos */
+  background-color: #ff0000;
 }
 
 .score-board {
@@ -53,17 +51,6 @@ body {
   margin-bottom: 20px;
   display: none;
 }
-
-/* .controls button {
-  padding: 30px 30px;
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 5px;
-  border-radius: 50%;
-} */
 
 .controls button {
   padding: 10px;
@@ -92,7 +79,6 @@ body {
   display: none;
 }
 
-/* Media Query para dispositivos móveis */
 @media (max-width: 600px) {
   .tetromino {
     background-color: green;
@@ -108,15 +94,21 @@ body {
   .controls {
     display: flex !important;
   }
-  /* .controls button {
-    display: flex;
-    flex-direction: row;
-    background-color: red;
-  } */
   .info-pc {
     display: none;
   }
   .info-mobile {
     display: block;
   }
+}
+
+.grid .taken {
+  border: 1px solid #444;
+  border-top: #007bff 2px solid;
+  background-color: #007bff;
+}
+
+.grid .tetromino {
+  border: none;
+  background-color: red;
 }

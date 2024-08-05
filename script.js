@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // show up-next Tetromino in mini-grid
     function addScore() {
-        for (let i = 0; i <= 200; i += width) {
+        for (let i = 0; i < 199; i += width) {
             const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
 
             if (row.every(index => grid.children[index].classList.contains('taken'))) {
@@ -189,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // start the game
     startButton.addEventListener('click', () => {
         console.log('Game started');
+
         if (timerId) {
             clearInterval(timerId);
             timerId = null;
