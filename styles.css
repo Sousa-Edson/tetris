@@ -12,7 +12,7 @@ body {
 
 .tetris {
   display: flex;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .grid {
@@ -50,14 +50,73 @@ body {
 
 .controls {
   margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
 }
 
-.controls button {
-  padding: 10px 20px;
+/* .controls button {
+  padding: 30px 30px;
   background-color: #007bff;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
   margin: 5px;
+  border-radius: 50%;
+} */
+
+.controls button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.controls button i {
+  font-size: 24px;
+}
+
+.info-pc {
+  display: block;
+}
+
+.info-mobile {
+  display: none;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+  .tetromino {
+    background-color: green;
+  }
+  .tetris {
+    flex-direction: column-reverse;
+  }
+
+  .score-board {
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .controls {
+    display: flex !important;
+  }
+  /* .controls button {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+  } */
+  .info-pc {
+    display: none;
+  }
+  .info-mobile {
+    display: block;
+  }
 }
