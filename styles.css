@@ -80,6 +80,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    height: 100%;
+    /* margin-top: 60px; */
+  }
   .tetromino {
     background-color: green;
   }
