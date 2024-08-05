@@ -189,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // start the game
     startButton.addEventListener('click', () => {
         console.log('Game started');
-
         if (timerId) {
             clearInterval(timerId);
             timerId = null;
