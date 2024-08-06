@@ -52,7 +52,7 @@ body {
 .controls {
   margin-top: 20px;
   margin-bottom: 20px;
-  display: none;
+  display: flex;
 }
 
 .controls button {
@@ -98,13 +98,9 @@ body {
 
 @media (max-width: 600px) {
   body {
-    /* max-height: 740px; */
     margin-top: 200px;
   }
-  .tetris {
-    /* background-color: red; */
-    /* max-height: 30%; */
-  }
+
   .tetromino {
     background-color: green;
   }
